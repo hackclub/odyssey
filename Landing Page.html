@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <title>Odyssey</title>
+        <style>
+            body {
+                background: #2F4156;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100vh;
+                margin: 0;
+            }
+
+            #logo {
+                max-width: 80%;
+                width: 400px;
+                height: auto;
+                margin-bottom: 3rem;
+            }
+
+            #continue {
+                padding: 1rem 2.5rem;
+                font-size: 1.25rem;
+                background: #2B5260;
+                color: white;
+                border: none;
+                cursor: pointer;
+                box-shadow: 0 0 15px #2B5260;
+                transition: all 0.3s ease;
+            }
+
+            #continue:hover {
+                background: #0097a7;
+                box-shadow: 0 0 20px #2B5260;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="logo" src="logo.png" alt="Odyssey Logo"/>
+        <button id="continue">Full Speed Ahead</button>
+        <script>
+            document.getElementById("continue").onclick - () => {
+                window.location.href = "map.html";
+            };
+        </script>
+    </body>
+</html>
