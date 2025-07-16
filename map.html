@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <title>Ocean Map</title>
+        <style>
+            body{
+                margin: 0;
+                overflow: hidden;
+            }
+
+            #map{
+              width: 100vw;
+              height: 100vh;
+                background: url('map-background.jpg') no-repeat center center;
+                background-size: cover;
+                position: relative;
+            }
+            
+            .click-point {
+                postition: absolute;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: rgba(0, 191, 255, 0.6);
+                border: 2px solid #fff;
+                cursor: pointer;
+            }
+
+            .click-point:hover {
+                transform: scale(1.1);
+            }
+            </style>
+    </head>
+    <body>
+       <div id="map">
+        <div class="click-point" style="top: 62%; left: 47%;" onclick="goToSub()"></div>
+       </div>
+       <script>
+            function goToSub() {
+                window.location.href = "loading.html";
+            }
+        </script>
+    </body>
+</html>
