@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"/>
+        <title>Underwater City</title>
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #background {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+
+            .building {
+                position: absolute;
+                width: 100px;
+                transition: transform 0.3s ease, filter 0.3s ease;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            .building:hover {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 15px #00e6ff);
+            }
+
+            #orphy {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                width: 120px;
+                z-index: 3;
+                display: none;
+            }
+
+            #speechBubble {
+                position: absolute;
+                bottom: 100px;
+                left: 150px;
+                max-width: 300px;
+                background: #ffffffcc;
+                padding: 15px 20px;
+                border-radius: 15px;
+                font-family: 'Courier New', monospace;
+                color: #003f5c;
+                box-shadow: 0 0 10px #00bcd4;
+                display: none;
+                z-index: 3;
+                white-space: pre-wrap;
+            }
+
+            @keyframes bounceInRight {
+                0% {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                60% {
+                    transform: translateX(-20%);
+                    opacity: 1;
+                }
+                80% {
+                    transform: translateX(10px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+            </style>
+    </head>
+    <body>
+        <img id="background" src="underwater-city.jpg" alt="Underwater City Background"/>
+        <img src="building1.png" class="building" style="top: 50%; left: 20%;" alt="Building 1" onclick="showMessage()"/>
+        <img src="building2.png" class="building" style="top: 40%; left: 50%;" alt="Building 2" onclick="showMessage()"/>
+        <img src="building3.png" class="building" style="top: 65%; left: 35%;" alt="Building 3" onclick="showMessage()"/>
+        <img src="building4.png" class="building" style="top: 30%; left: 70%;" alt="Building 4" onclick="showMessage()"/>
+
+        <img id="orphy" src="orphy.png" alt="Orphy"/>
+        <div id="speechBubble"></div>
+        <script>
+            function showMessage() {
+                const orphy = document.getElementById("orphy");
+                const bubble = document.getElementById("speechBubble");
+
+                orphy.style.display = "block";
+                orphy.style.animation = "none";
+                orphy.offsetHeight;
+                orphy.style.animation = "bounceInRight 0.8s ease forwards";
+
+                bubble.style.display = "block";
+                bubble.innerText = message;
+
+                let i = 0;
+                function type() {
+                    bubble.innterText += text.charAt(i);
+                    i++;
+                    setTimeout(type, 30);
+                }
+            }
+        </script>
+        </body>
+        </html>
