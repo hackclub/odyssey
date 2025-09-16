@@ -1,13 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import PastEventsCarousel from "./components/PastEventsCarousel";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
+
   return (
-    <div className="min-h-screen relative lowercase">
+    <div className="min-h-screen relative lowercase overflow-x-hidden">
       
       {/* Navigation Bar - Treasure Map Style */}
-      <nav className="fixed top-0 right-0 z-50 flex justify-end items-center px-8 py-4">
-        <div className="flex gap-6 text-amber-900 font-bold text-xl bg-amber-50 bg-opacity-90 px-8 py-4 rounded-lg shadow-xl border-2 border-amber-800 transform -rotate-1 backdrop-blur-sm">
+      <nav className="fixed top-0 right-0 z-50 flex justify-end items-center px-4 sm:px-8 py-4">
+        <div className="hidden md:flex gap-6 text-amber-900 font-bold text-xl bg-amber-50 bg-opacity-90 px-8 py-4 rounded-lg shadow-xl border-2 border-amber-800 transform -rotate-1 backdrop-blur-sm">
           <a href="#chart-course" className="hover:text-red-700 transition-colors flex items-center gap-2 font-serif">
             <span>🗺️</span> Chart Course
           </a>
@@ -21,10 +34,30 @@ export default function Home() {
             <span>🧭</span> FAQ
           </a>
         </div>
+        {/* Hamburger Menu - Mobile */}
+        <div className="md:hidden">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-amber-900 p-2 rounded-md bg-amber-50 bg-opacity-80">
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+            </svg>
+          </button>
+        </div>
       </nav>
 
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-amber-50 bg-opacity-95 md:hidden">
+          <div className="flex flex-col items-center justify-center h-full gap-8 text-2xl font-serif text-amber-900">
+            <a href="#chart-course" onClick={() => setIsMenuOpen(false)} className="hover:text-red-700 transition-colors flex items-center gap-2"><span>🗺️</span> Chart Course</a>
+            <a href="#about-guild" onClick={() => setIsMenuOpen(false)} className="hover:text-red-700 transition-colors flex items-center gap-2"><span>📜</span> The Guild</a>
+            <a href="#past-expeditions" onClick={() => setIsMenuOpen(false)} className="hover:text-red-700 transition-colors flex items-center gap-2"><span>⚓</span> Past Expeditions</a>
+            <a href="#faq" onClick={() => setIsMenuOpen(false)} className="hover:text-red-700 transition-colors flex items-center gap-2"><span>🧭</span> FAQ</a>
+          </div>
+        </div>
+      )}
+
       {/* --- Single Scroll Section --- */}
-      <section id="main-scroll" className="relative z-10 flex items-center justify-center px-4 sm:px-8 pb-24">
+      <section id="main-scroll" className="relative z-10 flex items-center justify-center px-4 sm:px-8 pb-24 pt-24">
         <div className="max-w-7xl mx-auto text-center">
           {/* Scroll Container */}
           <div className="relative pt-10">
@@ -39,10 +72,10 @@ export default function Home() {
             
             
             {/* Scroll Parchment */}
-            <div className="relative wavy-parchment-container px-4 sm:px-8 md:px-16 pb-8 pt-0 sm:pb-16">
+            <div className="relative wavy-parchment-container px-6 sm:px-8 md:px-16 pb-8 pt-0 sm:pb-16">
               
               {/* --- Combined Content --- */}
-              <div className="text-amber-900 font-serif space-y-16 text-center pt-12">
+              <div className="text-amber-900 font-serif space-y-16 text-center pt-8 sm:pt-12">
 
                 {/* --- Hero Logo Section (No Border) --- */}
                 <div className="relative">
@@ -53,7 +86,7 @@ export default function Home() {
                       alt="Odyssey Logo"
                       width={2000}
                       height={1000}
-                      className="mx-auto drop-shadow-xl sepia contrast-110 max-w-full h-auto"
+                      className="mx-auto drop-shadow-xl sepia contrast-110 max-w-[80%] sm:max-w-full h-auto"
                       priority
                     />
                     <div className="mt-8 text-blue-900 text-xl sm:text-2xl md:text-3xl font-bold tracking-wider font-serif">
