@@ -90,7 +90,7 @@ export default function Home() {
                       priority
                     />
                     <div className="mt-8 text-blue-900 text-xl sm:text-2xl md:text-3xl font-bold tracking-wider font-serif">
-                      ⚓ october 2nd, 2025 ⚓
+                      ⚓ october 24th, 2025 ⚓
                     </div>
                     <div className="mt-4 text-blue-800 text-base sm:text-lg md:text-xl italic font-serif border-t-2 border-amber-700 pt-4 max-w-lg mx-auto">
                       by hack club&apos;s athena initiative
@@ -126,7 +126,7 @@ export default function Home() {
                     <div className="grid md:grid-cols-2 gap-6 text-left">
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">📅 When:</h4>
-                        <p className="text-sm sm:text-base">applications close september 31st, 2025</p>
+                        <p className="text-sm sm:text-base">friday, october 24th 2025 from 8 AM - 4 PM! </p>
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">📍 Where:</h4>
@@ -134,7 +134,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">💰 Cost:</h4>
-                        <p className="text-sm sm:text-base">free! lunch is provided.</p>
+                        <p className="text-sm sm:text-base">free! lunch, swag, and devices are provided.</p>
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">👥 Who:</h4>
