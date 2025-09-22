@@ -134,7 +134,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">💰 Cost:</h4>
-                        <p className="text-sm sm:text-base">free! lunch, swag, and devices are provided.</p>
+                        <p className="text-sm sm:text-base">free! lunch and swag are provided, just bring a device to code with! </p>
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">👥 Who:</h4>
