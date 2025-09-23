@@ -142,9 +142,11 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <button className="bg-red-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-lg sm:text-xl hover:bg-red-800 transition-colors shadow-lg transform hover:scale-105">
-                    ⚓ Register Now
-                  </button>
+                  <a href="https://forms.hackclub.com/t/wn2YG4JcV4us">
+                    <button className="bg-red-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-bold text-lg sm:text-xl hover:bg-red-800 transition-colors shadow-lg transform hover:scale-105">
+                      ⚓ Register Now
+                    </button>
+                  </a>
                 </div>
 
                 <hr className="border-t-4 border-dashed border-amber-800 opacity-50 my-12" />
