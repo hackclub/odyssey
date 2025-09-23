@@ -229,7 +229,7 @@ export default function Home() {
                     <div className="transition-transform duration-300 transform hover:translate-x-2">
                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 text-green-800 font-serif">Have another question?</h3>
                       <p className="text-base sm:text-lg text-amber-900 leading-relaxed">
-                        You can email us any time at <a href="mailto:elia@hackclub.com" className="font-bold underline hover:text-blue-800">elia@hackclub.com</a>.
+                        You can email us any time at <a href="mailto:elia@hackclub.com" className="font-bold underline hover:text-blue-800">andreayang64@gmail.com</a>.
                       </p>
                     </div>
                   </div>
