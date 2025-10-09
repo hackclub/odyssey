@@ -130,7 +130,8 @@ export default function Home() {
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">📍 Where:</h4>
-                        <p className="text-sm sm:text-base">SnapChat HQ in Los Angeles, California</p>
+                        <p className="text-sm sm:text-base">SnapChat HQ in Los Angeles, California! 2772 Donald Douglas Loop N, Santa Monica CA, 90405
+</p>
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">💰 Cost:</h4>
