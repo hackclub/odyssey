@@ -57,10 +57,10 @@ export default function Home() {
       )}
 
       {/* --- Single Scroll Section --- */}
-      <section id="main-scroll" className="relative z-10 flex items-center justify-center px-4 sm:px-8 pb-24 pt-24">
-        <div className="max-w-7xl mx-auto text-center">
+      <section id="main-scroll" className="relative z-10 flex items-center justify-center px-4 sm:px-8 pb-24 pt-24 w-full">
+        <div className="max-w-7xl mx-auto text-center w-full">
           {/* Scroll Container */}
-          <div className="relative pt-10">
+          <div className="relative pt-10 w-full">
             
             <Image 
               src="/flag-orpheus-top.png"
