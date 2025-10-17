@@ -126,7 +126,7 @@ export default function Home() {
                     <div className="grid md:grid-cols-2 gap-6 text-left">
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">📅 When:</h4>
-                        <p className="text-sm sm:text-base">friday, october 24th 2025 from 8 AM - 4 PM! </p>
+                        <p className="text-sm sm:text-base">friday, october 24th 2025 from 8 AM - 4 PM! we will be providing official excuse letters from school. </p>
                       </div>
                       <div>
                         <h4 className="font-bold text-base sm:text-lg mb-2">📍 Where:</h4>
