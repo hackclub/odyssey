@@ -57,19 +57,23 @@ export default function Home() {
       )}
 
       {/* --- Single Scroll Section --- */}
-      <section id="main-scroll" className="relative z-10 flex items-center justify-center px-4 sm:px-8 pb-24 pt-24 w-full">
-        <div className="max-w-7xl mx-auto text-center w-full">
+      <section id="main-scroll" className="relative z-10 flex items-center justify-center px-4 sm:px-8 pb-24 w-full">
+        <a
+          href="https://hackclub.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute top-0 left-4 z-20 hidden md:block"
+        >
+          <Image 
+            src="/flag-orpheus-top.png"
+            alt="Orpheus Flag"
+            width={150}
+            height={150}
+          />
+        </a>
+        <div className="max-w-7xl mx-auto text-center w-full pt-24">
           {/* Scroll Container */}
           <div className="relative pt-10 w-full">
-            
-            <Image 
-              src="/flag-orpheus-top.png"
-              alt="Orpheus Flag"
-              width={150}
-              height={150}
-              className="absolute top-0 left-0 z-20 hidden md:block"
-            />
-            
             
             {/* Scroll Parchment */}
             <div className="relative wavy-parchment-container px-6 sm:px-8 md:px-16 pb-8 pt-0 sm:pb-16">
@@ -90,7 +94,7 @@ export default function Home() {
                       priority
                     />
                     <div className="mt-8 text-blue-900 text-xl sm:text-2xl md:text-3xl font-bold tracking-wider font-serif">
-                      ⚓ october 24th, 2025 ⚓
+                      ⚓ date TBA ⚓
                     </div>
                     <div className="mt-4 text-blue-800 text-base sm:text-lg md:text-xl italic font-serif border-t-2 border-amber-700 pt-4 max-w-lg mx-auto">
                       by hack club&apos;s athena initiative
